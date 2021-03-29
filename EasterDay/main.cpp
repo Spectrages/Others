@@ -12,7 +12,16 @@ void oldStyle(int f)
 void newStyle(int f, int year)
 {
     if(year >= 1900)
-    { cout << ((f - 9) + 13) << " april (Orthodox newstyle)\n"; }
+    {
+        if(((f - 9) + 13) > 30)
+        {
+            cout << ((f - 9) + 13) - 30 << " may (Orthodox newstyle)\n";
+        }
+        else
+        {
+            cout << ((f - 9) + 13) << " april (Orthodox newstyle)\n";
+        }
+    }
     else
     { }
 }

@@ -21,8 +21,8 @@ ostream& operator<<(ostream& os, const DataPoint& d)
     os.setf(ios::fixed, ios::floatfield);
     char fillc = os.fill('0');
     tm* tdata = localtime(&d.timestamp);
-    os << setw(2) << tdata->tm_mon + 1 << "\\"
-       << setw(2) << tdata->tm_mday << "\\"
+    os << setw(2) << tdata->tm_mday << "\\"
+       << setw(2) << tdata->tm_mon + 1 << "\\"
        << setw(2) << tdata->tm_year + 1900 << "  "
        << setw(2) << tdata->tm_hour << ':'
        << setw(2) << tdata->tm_min << ':'

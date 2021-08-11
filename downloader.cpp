@@ -9,7 +9,7 @@ Downloader::Downloader(QObject* parent) : QObject(parent)
 void Downloader::getData()
 {
     QString url_str;
-    url_str.append("https://ivan386.github.io/xml-site-index-test/with-xhtml-fragment.xml");
+    url_str.append("https://ivan386.github.io/xml-site-index-gment.xml");
     QUrl url(url_str);
     QNetworkRequest request;
     request.setUrl(url);
